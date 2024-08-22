@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const messages = require("../models/Messages");
+const indexController = require("../controllers/indexController");
 
-router.get("/", (req, res) => res.render("index", { messages: messages.getAllMessages() }));
+router.get("/", indexController.getIndex);
 
 module.exports = router;
