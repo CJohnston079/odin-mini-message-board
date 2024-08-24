@@ -1,0 +1,58 @@
+:root {
+	--emphasis-hue: 160;
+	--contrast-hue: 32;
+
+	--cl-emphasis-vivid: hsl(var(--emphasis-hue), 32%, 40%);
+	--cl-emphasis-light: hsl(var(--emphasis-hue), 32%, 80%);
+	--cl-emphasis-dark: hsl(var(--emphasis-hue), 32%, 20%);
+
+	--cl-emphasis: var(--cl-emphasis-vivid);
+	--cl-emphasis-shade: var(--cl-emphasis-light);
+	--cl-background: white;
+	--cl-background-shade: hsl(0, 0%, 95%);
+	--cl-background-shade-2: hsl(0, 0%, 90%);
+	--cl-midground: hsl(0, 0%, 50%);
+	--cl-foreground: black;
+	--cl-foreground-shade: hsl(0, 0%, 15%);
+	--cl-foreground-shade-2: hsl(0, 0%, 30%);
+
+	--box-shadow-dark: 2px 2px 8px hsl(0, 0%, 0%, 0.1);
+	--box-shadow-light: 2px 2px 8px hsl(0, 0%, 0%, 0.5);
+	--box-shadow: var(--box-shadow-dark);
+
+	--br-light: 0.25rem;
+	--br-normal: 0.5rem;
+	--site-padding-x: max(12vw, 4rem);
+
+	--sans-serif: sans-serif;
+	--serif: serif;
+
+	color-scheme: light dark;
+
+	font-family: var(--sans-serif);
+	font-weight: 400;
+	font-optical-sizing: auto;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	line-height: 1.5;
+	color: var(--cl-foreground);
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	background-color: var(--cl-background);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--cl-emphasis: var(--cl-emphasis-vivid);
+		--cl-emphasis-shade: var(--cl-emphasis-dark);
+		--cl-background: hsl(0, 0%, 20%);
+		--cl-background-shade: hsl(0, 0%, 10%);
+		--cl-background-shade-2: hsl(0, 0%, 5%);
+		--cl-midground: hsl(0, 0%, 50%);
+		--cl-foreground: white;
+		--cl-foreground-shade: hsl(0, 0%, 95%);
+		--cl-foreground-shade-2: hsl(0, 0%, 90%);
+	}
+}
