@@ -56,3 +56,67 @@
 		--cl-foreground-shade-2: hsl(0, 0%, 90%);
 	}
 }
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: var(--cl-background-shade);
+}
+
+main {
+	border-radius: var(--br-normal);
+	padding: 2rem;
+	height: 80vh;
+	min-width: 50vw;
+
+	background-color: var(--cl-background);
+	box-shadow: var(--box-shadow);
+}
+
+h1 {
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#messages {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.message {
+	border: solid 1px var(--cl-midground);
+	border-radius: var(--br-light);
+	padding: 0.5rem;
+}
+
+button a {
+	text-decoration: none;
+	color: var(--cl-foreground);
+}
+
+button {
+	border: none;
+	border-radius: var(--br-light);
+	padding: 0.5rem;
+
+	font-size: 1rem;
+
+	background-color: var(--cl-background-shade-2);
+	cursor: pointer;
+	margin-top: 1rem;
+}

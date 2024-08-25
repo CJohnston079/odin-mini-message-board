@@ -7,22 +7,24 @@
 		<title>Message Board | New Message</title>
 	</head>
 	<body>
-		<h1>New message</h1>
-		<form method="post" action="/new">
-			<ul>
-				<li>
-					<label for="user">User</label>
-					<input id="user" name="user" type="text" required />
-				</li>
-				<li>
-					<label for="text">Message</label>
-					<input id="text" name="text" type="text" required />
-				</li>
-				<li>
-					<button type="submit">Post</button>
-					<button type="button"><a href="./">Cancel</a></button>
-				</li>
-			</ul>
-		</form>
+		<main>
+			<h1>New message</h1>
+			<form method="post" action="/new">
+				<ul>
+					<li>
+						<label for="user">User</label>
+						<input id="user" name="user" type="text" required />
+					</li>
+					<li>
+						<label for="text">Message</label>
+						<input id="text" name="text" type="text" required />
+					</li>
+					<li>
+						<button type="submit">Post</button>
+						<button type="button"><a href="./">Cancel</a></button>
+					</li>
+				</ul>
+			</form>
+		</main>
 	</body>
 </html>

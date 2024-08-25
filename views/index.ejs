@@ -7,16 +7,18 @@
 		<link rel="stylesheet" href="./styles.css" />
 	</head>
 	<body>
-		<h1>Message Board</h1>
-		<ul>
-			<% messages.map((message) => { %>
-			<li>
-				<h3><%= message.user %></h3>
-				<p><%= message.text %></p>
-				<p><%= message.added %></p>
-			</li>
-			<% }) %>
-		</ul>
-		<button><a href="./new">New Message</a></button>
+		<main>
+			<h1>Message Board</h1>
+			<ul id="messages">
+				<% messages.map((message) => { %>
+				<li class="message">
+					<h3><%= message.user %></h3>
+					<p><%= message.text %></p>
+					<p><%= message.added %></p>
+				</li>
+				<% }) %>
+			</ul>
+			<button><a href="./new">New Message</a></button>
+		</main>
 	</body>
 </html>
