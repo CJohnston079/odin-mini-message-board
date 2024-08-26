@@ -14,9 +14,9 @@
 				<li class="message-container">
 					<div class="message-header">
 						<h3><%= message.user %></h3>
-						<p><%= formatDate(message.added) %></p>
+						<p class="added"><%= formatDate(message.added) %></p>
 					</div>
-					<p><%= message.text %></p>
+					<p class="message-body"><%= message.text %></p>
 				</li>
 				<% }) %>
 			</ul>

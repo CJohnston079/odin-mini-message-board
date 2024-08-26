@@ -1,10 +1,10 @@
 :root {
-	--emphasis-hue: 160;
+	--emphasis-hue: 220;
 	--contrast-hue: 32;
 
-	--cl-emphasis-vivid: hsl(var(--emphasis-hue), 32%, 40%);
-	--cl-emphasis-light: hsl(var(--emphasis-hue), 32%, 80%);
-	--cl-emphasis-dark: hsl(var(--emphasis-hue), 32%, 20%);
+	--cl-emphasis-vivid: hsl(var(--emphasis-hue), 62%, 50%);
+	--cl-emphasis-light: hsl(var(--emphasis-hue), 62%, 90%);
+	--cl-emphasis-dark: hsl(var(--emphasis-hue), 62%, 20%);
 
 	--cl-emphasis: var(--cl-emphasis-vivid);
 	--cl-emphasis-shade: var(--cl-emphasis-light);
@@ -20,8 +20,8 @@
 	--box-shadow-light: 2px 2px 8px hsl(0, 0%, 0%, 0.5);
 	--box-shadow: var(--box-shadow-dark);
 
-	--br-light: 0.25rem;
-	--br-normal: 0.5rem;
+	--br-light: 0.5rem;
+	--br-normal: 1rem;
 	--site-padding-x: max(12vw, 4rem);
 
 	--sans-serif: sans-serif;
@@ -92,6 +92,10 @@ h1 {
 	font-weight: bold;
 }
 
+h3 {
+	font-size: 1rem;
+}
+
 #messages {
 	display: flex;
 	flex-direction: column;
@@ -102,12 +106,23 @@ h1 {
 	border: solid 1px var(--cl-midground);
 	border-radius: var(--br-light);
 	padding: 0.5rem;
+
+	background-color: var(--cl-background-shade);
 }
 
 .message-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 0.25rem;
+}
+
+.added {
+	color: var(--cl-midground);
+}
+
+.message-body {
+	color: var(--cl-foreground-shade-2);
 }
 
 button a {
@@ -118,11 +133,20 @@ button a {
 button {
 	border: none;
 	border-radius: var(--br-light);
-	padding: 0.5rem;
+	padding: 1rem;
 
 	font-size: 1rem;
+	font-weight: 700;
+	color: white;
 
-	background-color: var(--cl-background-shade-2);
+	background-color: var(--cl-emphasis);
 	cursor: pointer;
 	margin-top: 1rem;
+
+	transition: background-color 400ms;
+}
+
+button:hover {
+	color: var(--cl-foreground);
+	background-color: var(--cl-emphasis-shade);
 }
