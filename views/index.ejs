@@ -11,10 +11,12 @@
 			<h1>Message Board</h1>
 			<ul id="messages">
 				<% messages.map((message) => { %>
-				<li class="message">
-					<h3><%= message.user %></h3>
+				<li class="message-container">
+					<div class="message-header">
+						<h3><%= message.user %></h3>
+						<p><%= message.added %></p>
+					</div>
 					<p><%= message.text %></p>
-					<p><%= message.added %></p>
 				</li>
 				<% }) %>
 			</ul>

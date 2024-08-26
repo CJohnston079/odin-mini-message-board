@@ -98,10 +98,16 @@ h1 {
 	gap: 1rem;
 }
 
-.message {
+.message-container {
 	border: solid 1px var(--cl-midground);
 	border-radius: var(--br-light);
 	padding: 0.5rem;
+}
+
+.message-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 button a {
