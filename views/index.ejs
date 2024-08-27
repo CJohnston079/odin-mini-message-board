@@ -16,8 +16,8 @@
 				<% messages.map((message) => { %>
 				<li class="message-container">
 					<div class="message-header">
-						<h3><%= message.user %></h3>
-						<p class="added"><%= formatDate(message.added) %></p>
+						<h3><%= message.username %></h3>
+						<p class="added"><%= formatDate(message.sent_at) %></p>
 					</div>
 					<p class="message-body"><%= message.message %></p>
 				</li>

@@ -1,10 +1,9 @@
-const messages = require("../models/Messages");
+const db = require("../db/queries");
 const timeAgo = require("../utils/timeAgo");
 
-const getIndex = (req, res) => {
-	const allMessages = messages.getAllMessages();
+async function getAllMessages(req, res) {
+	const messages = await db.getAllMessages();
+	res.render("index", { messages, formatDate: timeAgo });
+}
 
-	res.render("index", { messages: allMessages, formatDate: timeAgo });
-};
-
-module.exports = { getIndex };
+module.exports = { getAllMessages };

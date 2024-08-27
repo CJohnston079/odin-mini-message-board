@@ -1,4 +1,5 @@
-function timeAgo(date) {
+function timeAgo(timestamp) {
+	const date = new Date(timestamp);
 	const now = new Date();
 	const seconds = Math.floor((now - date) / 1000) + 1;
 
