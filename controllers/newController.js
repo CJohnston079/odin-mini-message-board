@@ -1,11 +1,10 @@
-// const messages = require("../models/Messages");
+const db = require("../db/queries");
 
-const getNew = (req, res) => res.render("new", {});
+const getNewMessage = (req, res) => res.render("new", {});
 
-const postNew = (req, res) => {
-	const { user, text } = req.body;
-	// messages.addMessage(user, text);
+async function postNewMessage(req, res) {
+	await db.insertMessage(req.body);
 	res.redirect("/");
-};
+}
 
-module.exports = { getNew, postNew };
+module.exports = { getNewMessage, postNewMessage };
