@@ -8,7 +8,10 @@
 	</head>
 	<body>
 		<main>
-			<h1>Message Board</h1>
+			<header>
+				<h1>Message Board</h1>
+				<button class="button"><a href="./new">New Message +</a></button>
+			</header>
 			<ul id="messages">
 				<% messages.map((message) => { %>
 				<li class="message-container">
@@ -16,11 +19,10 @@
 						<h3><%= message.user %></h3>
 						<p class="added"><%= formatDate(message.added) %></p>
 					</div>
-					<p class="message-body"><%= message.text %></p>
+					<p class="message-body"><%= message.message %></p>
 				</li>
 				<% }) %>
 			</ul>
-			<button><a href="./new">New Message</a></button>
 		</main>
 	</body>
 </html>
