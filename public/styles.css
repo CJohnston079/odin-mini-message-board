@@ -181,10 +181,13 @@ a {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-	overflow: scroll;
+
 	margin-bottom: 1rem;
 	padding-top: 2rem;
 	border-radius: 0 0 var(--br-normal) 0;
+	width: 100%;
+
+	overflow: scroll;
 }
 
 .gradient-overlay {
