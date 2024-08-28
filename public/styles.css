@@ -1,15 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 :root {
-	--emphasis-hue: 220;
-	--contrast-hue: 32;
+	--emphasis-hue: 40;
 
-	--cl-emphasis-vivid: hsl(var(--emphasis-hue), 62%, 50%);
-	--cl-emphasis-light: hsl(var(--emphasis-hue), 62%, 90%);
-	--cl-emphasis-dark: hsl(var(--emphasis-hue), 62%, 20%);
-
-	--cl-emphasis: var(--cl-emphasis-vivid);
-	--cl-emphasis-shade: var(--cl-emphasis-light);
+	--cl-emphasis: hsl(var(--emphasis-hue), 30%, 50%);
+	--cl-emphasis-shade: hsl(var(--emphasis-hue), 30%, 85%);
 	--cl-background: white;
 	--cl-background-shade: hsl(0, 0%, 95%);
 	--cl-background-shade-2: hsl(0, 0%, 90%);
@@ -46,7 +41,7 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--cl-emphasis: var(--cl-emphasis-vivid);
-		--cl-emphasis-shade: var(--cl-emphasis-dark);
+		--cl-emphasis-shade: hsl(var(--emphasis-hue), 50%, 5%);
 		--cl-background: hsl(0, 0%, 20%);
 		--cl-background-shade: hsl(0, 0%, 10%);
 		--cl-background-shade-2: hsl(0, 0%, 5%);
@@ -72,7 +67,10 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
-	background-color: var(--cl-background-shade);
+	background: radial-gradient(circle, transparent, var(--cl-emphasis-shade)),
+		linear-gradient(-90deg, hsl(0, 0%, 50%, 0.1) 1px, transparent 1px),
+		linear-gradient(0deg, hsl(0, 0%, 50%, 0.1) 1px, transparent 1px);
+	background-size: auto, 6rem 6rem, 6rem 6rem;
 }
 
 main {
@@ -89,11 +87,20 @@ main {
 	box-shadow: var(--box-shadow);
 }
 
-h1 {
+header {
+	text-align: center;
 	position: relative;
+	z-index: 2;
+}
+
+h1 {
 	font-size: 2rem;
 	font-weight: 700;
-	z-index: 2;
+}
+
+header p {
+	font-size: 1.2rem;
+	color: var(--cl-foreground-shade-2);
 }
 
 h3 {
