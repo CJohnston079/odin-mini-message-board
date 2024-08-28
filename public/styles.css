@@ -115,23 +115,21 @@ a {
 .button {
 	border: none;
 	border-radius: var(--br-light);
-	padding: 0.75rem 1.25rem;
 
 	font-size: 0.9rem;
 	font-weight: 700;
 	letter-spacing: 0.1rem;
 	text-transform: uppercase;
-	color: var(--cl-background);
+	color: var(--cl-foreground-shade-2);
 
-	background-color: var(--cl-foreground-shade);
+	background-color: var(--cl-background);
 	cursor: pointer;
 
 	transition: 400ms;
 }
 
-.button:hover {
-	color: var(--cl-foreground);
-	background-color: var(--cl-background-shade-2);
+.button a {
+	padding: 0.75rem 1.25rem;
 }
 
 .new-button {
@@ -148,7 +146,7 @@ a {
 	font-weight: 700;
 	letter-spacing: 0.1rem;
 	text-transform: uppercase;
-	color: var(--cl-background);
+	color: white;
 
 	background: linear-gradient(
 		70deg,
@@ -239,13 +237,15 @@ form ul {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	gap: 1rem;
 }
 
-form li {
+form .field {
 	display: flex;
 	flex-direction: column;
 	gap: 0.25rem;
+	width: 100%;
 }
 
 label {
@@ -267,6 +267,10 @@ textarea {
 textarea {
 	resize: none;
 	height: 15vh;
+}
+
+#submit-button {
+	margin-top: 1rem;
 }
 
 @keyframes pulse {

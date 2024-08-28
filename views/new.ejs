@@ -14,17 +14,24 @@
 			</header>
 			<form method="post" action="/new">
 				<ul>
-					<li>
+					<li class="field">
 						<label for="username">Your name: </label>
 						<input id="username" name="username" type="text" required />
 					</li>
-					<li>
+					<li class="field">
 						<label for="message">Your message:</label>
 						<textarea name="message" id="message"></textarea>
 					</li>
+					<li id="submit-button">
+						<button class="new-button" type="submit"><a>Post message</a></button>
+					</li>
 					<li>
-						<button class="button" type="submit">Post</button>
-						<button class="button" type="button"><a href="./">Cancel</a></button>
+						<button class="button" type="button">
+							<a href="./"
+								><span style="display: inline-block; transform: rotate(180deg)">➞</span> Back to
+								messages</a
+							>
+						</button>
 					</li>
 				</ul>
 			</form>
