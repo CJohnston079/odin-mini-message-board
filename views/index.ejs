@@ -8,10 +8,7 @@
 	</head>
 	<body>
 		<main>
-			<header>
-				<h1>Message Board</h1>
-				<button class="button"><a href="./new">New Message +</a></button>
-			</header>
+			<h1>Message Board</h1>
 			<ul id="messages">
 				<% messages.map((message) => { %>
 				<li class="message-container">
@@ -23,6 +20,7 @@
 				</li>
 				<% }) %>
 			</ul>
+			<button class="new-button"><a href="./new">Leave a message +</a></button>
 		</main>
 	</body>
 </html>
