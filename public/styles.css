@@ -79,10 +79,9 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 1rem;
 
-	border-radius: var(--br-normal);
-	padding: 1rem 2rem;
+	border-radius: 1rem;
+	padding: 2rem;
 	height: 80vh;
 	width: min(80vw, 30rem);
 
@@ -91,8 +90,10 @@ main {
 }
 
 h1 {
+	position: relative;
 	font-size: 2rem;
 	font-weight: 700;
+	z-index: 2;
 }
 
 h3 {
@@ -176,7 +177,23 @@ a {
 	flex-direction: column;
 	gap: 0.5rem;
 	overflow: scroll;
-	border-radius: 0 var(--br-light) var(--br-light) 0;
+	margin-bottom: 1rem;
+	padding-top: 2rem;
+	border-radius: 0 0 var(--br-normal) 0;
+}
+
+.gradient-overlay {
+	width: 100%;
+	box-shadow: 0 0rem 1rem 1rem var(--cl-background), 0 1rem 2rem 1rem var(--cl-background);
+	pointer-events: none;
+	z-index: 1;
+}
+
+.messages-end-text {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--cl-midground);
 }
 
 .message-container {
