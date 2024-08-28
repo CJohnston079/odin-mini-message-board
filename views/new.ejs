@@ -8,7 +8,10 @@
 	</head>
 	<body>
 		<main>
-			<h1>New message</h1>
+			<header>
+				<h1>Pet Message Board</h1>
+				<p>Leave a message from your pet!</p>
+			</header>
 			<form method="post" action="/new">
 				<ul>
 					<li>
@@ -17,7 +20,7 @@
 					</li>
 					<li>
 						<label for="message">Your message:</label>
-						<input id="message" name="message" type="text" required />
+						<textarea name="message" id="message"></textarea>
 					</li>
 					<li>
 						<button class="button" type="submit">Post</button>

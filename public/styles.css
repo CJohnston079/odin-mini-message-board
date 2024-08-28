@@ -226,6 +226,49 @@ a {
 	color: var(--cl-foreground-shade-2);
 }
 
+form {
+	flex-grow: 1;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 6vh;
+}
+
+form ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1rem;
+}
+
+form li {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+label {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	color: var(--cl-foreground-shade-2);
+}
+
+input,
+textarea {
+	border: solid 1px var(--cl-foreground-shade-2);
+	border-radius: var(--br-light);
+	padding: 0.5rem;
+
+	font-size: 1rem;
+	font-family: "Nunito", system-ui;
+}
+
+textarea {
+	resize: none;
+	height: 15vh;
+}
+
 @keyframes pulse {
 	0% {
 		margin: 4px;
