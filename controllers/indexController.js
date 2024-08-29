@@ -6,4 +6,8 @@ async function getAllMessages(req, res) {
 	res.render("index", { messages, formatDate: timeAgo });
 }
 
-module.exports = { getAllMessages };
+function getPageNotFound(req, res) {
+	res.render("pageNotFound", {});
+}
+
+module.exports = { getAllMessages, getPageNotFound };

@@ -14,6 +14,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/new", newRouter);
+app.use("/", indexRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`server listening on port ${port}`));
