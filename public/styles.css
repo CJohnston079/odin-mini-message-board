@@ -185,12 +185,14 @@ a {
 #messages {
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-end;
 	gap: 0.5rem;
 
 	margin-bottom: 1rem;
 	padding-top: 2rem;
 	border-radius: 0 0 var(--br-normal) 0;
 	width: 100%;
+	height: 100%;
 
 	overflow: scroll;
 }
