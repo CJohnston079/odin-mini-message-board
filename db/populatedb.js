@@ -3,6 +3,9 @@
 const { Client } = require("pg");
 require("dotenv").config();
 
+const isProduction = process.env.NODE_ENV === "production";
+const sslConfig = isProduction ? "?sslmode=require" : "";
+
 const SQL = `
 CREATE TABLE IF NOT EXISTS message_board (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
@@ -26,7 +29,8 @@ async function main() {
 	const database = getArgumentValue("--database", process.env.DATABASE);
 
 	const client = new Client({
-		connectionString: `postgresql://${user}:${password}@${host}:5432/${database}`,
+		connectionString: `postgresql://${user}:${password}@${host}:5432/${database}${sslConfig}`,
+		ssl: isProduction ? { rejectUnauthorized: false } : false,
 	});
 	await client.connect();
 	await client.query(SQL);
