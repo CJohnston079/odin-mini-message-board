@@ -4,6 +4,7 @@ const { Client } = require("pg");
 require("dotenv").config();
 
 const SQL = `
+DROP TABLE IF EXISTS message_board;
 CREATE TABLE IF NOT EXISTS message_board (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   username VARCHAR ( 32 ),
@@ -18,7 +19,7 @@ function getArgumentValue(flag, defaultValue) {
 }
 
 async function main() {
-	console.log("seeding...");
+	console.log("Creating table `message_board` if not exists...");
 
 	const user = getArgumentValue("--user", process.env.USER);
 	const password = getArgumentValue("--password", process.env.PASSWORD);
@@ -31,7 +32,7 @@ async function main() {
 	await client.connect();
 	await client.query(SQL);
 	await client.end();
-	console.log("seeding complete");
+	console.log("done");
 }
 
 main();
