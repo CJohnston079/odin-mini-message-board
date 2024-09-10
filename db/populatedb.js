@@ -7,7 +7,7 @@ const isProduction = process.env.NODE_ENV === "production";
 const sslConfig = isProduction ? "?sslmode=require" : "";
 
 const SQL = `
-CREATE TABLE IF NOT EXISTS message_board (
+CREATE TABLE IF NOT EXISTS messages (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   username VARCHAR ( 32 ),
   message VARCHAR ( 255 ),
