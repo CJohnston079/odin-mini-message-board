@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const container = document.querySelector("#messages");
+	const container = document.querySelector("#message-board-container");
 	if (container) {
 		container.scrollTop = container.scrollHeight;
 	} else {
