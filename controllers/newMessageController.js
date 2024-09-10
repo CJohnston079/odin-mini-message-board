@@ -1,6 +1,6 @@
 const db = require("../db/queries");
 
-const getNewMessage = (req, res) => res.render("new", {});
+const getNewMessage = (req, res) => res.render("newMessage", {});
 
 async function postNewMessage(req, res) {
 	if (req.body.username) {
