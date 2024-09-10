@@ -3,8 +3,9 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./styles.css" />
+		<script src="./script.js" defer></script>
 		<title>Pet Message Board | New Message</title>
+		<link rel="stylesheet" href="./styles.css" />
 		<link rel="shortcut icon" href="./favicon.svg" type="image/x-icon" />
 	</head>
 	<body>
@@ -21,11 +22,11 @@
 						<input class="field" id="username" name="username" type="text" required />
 					</div>
 					<div class="field-container">
-						<label class="field-label" for="message">Your message:</label>
-						<textarea class="field" id="message" name="message" maxlength="200"></textarea>
+						<label class="field-label" for="message" required>Your message:</label>
+						<textarea class="field" id="message" name="message" maxlength="200" required></textarea>
 					</div>
 					<div id="submit-button-container">
-						<button class="btn-emphasis" type="submit">
+						<button id="submit-btn" class="btn-emphasis" type="submit">
 							<span class="btn-emphasis-text">Post message</span>
 						</button>
 					</div>

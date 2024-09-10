@@ -21,3 +21,26 @@ const renderMessageColours = (function () {
 		container.style.color = colour;
 	});
 })();
+
+const preventRepeatSubmissions = (function () {
+	const form = document.querySelector("#new-message-form");
+	const button = document.querySelector("#submit-btn");
+	const buttonText = button.querySelector(".btn-emphasis-text");
+
+	let isSubmitting = false;
+
+	button.addEventListener("click", e => {
+		if (!form.checkValidity()) {
+			return;
+		}
+
+		if (isSubmitting) {
+			e.preventDefault();
+			return;
+		}
+
+		isSubmitting = true;
+		buttonText.textContent = "Please wait...";
+		button.classList.add("btn-loading");
+	});
+})();

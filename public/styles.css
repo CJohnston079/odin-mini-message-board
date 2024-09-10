@@ -299,6 +299,21 @@ body {
 	transform: rotate(180deg);
 }
 
+.btn-loading {
+	opacity: 0.5;
+	cursor: progress !important;
+}
+
+.btn-loading:hover {
+	filter: hue-rotate(0);
+	animation: none;
+}
+
+.btn-loading .btn-emphasis-text:hover {
+	padding: 1rem 2rem;
+	font-size: 0.9rem;
+}
+
 .err-container {
 	display: flex;
 	flex-direction: column;
