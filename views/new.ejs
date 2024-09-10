@@ -7,34 +7,33 @@
 		<title>Message Board | New Message</title>
 	</head>
 	<body>
-		<main>
-			<header>
-				<h1>Pet Message Board</h1>
-				<p>Leave a message from your pet!</p>
+		<div id="message-board">
+			<header class="page-header-container">
+				<h1 class="page-heading">Pet Message Board</h1>
+				<p class="page-subheading">Leave a message from your pet!</p>
 			</header>
-			<form method="post" action="/new">
-				<ul>
-					<li class="field">
-						<label for="username">Your name: </label>
-						<input id="username" name="username" type="text" required />
+			<form id="new-message-form" method="post" action="/new">
+				<ul class="form-fields-container">
+					<li class="field-container">
+						<label class="field-label" for="username">Your name: </label>
+						<input class="field" id="username" name="username" type="text" required />
 					</li>
-					<li class="field">
-						<label for="message">Your message:</label>
-						<textarea name="message" id="message" maxlength="200"></textarea>
+					<li class="field-container">
+						<label class="field-label" for="message">Your message:</label>
+						<textarea class="field" id="message" name="message" maxlength="200"></textarea>
 					</li>
 					<li id="submit-button">
-						<button class="new-button" type="submit"><a>Post message</a></button>
+						<button class="btn-emphasis" type="submit">
+							<a class="btn-emphasis-text">Post message</a>
+						</button>
 					</li>
 					<li>
-						<button class="button" type="button">
-							<a href="./"
-								><span style="display: inline-block; transform: rotate(180deg)">➞</span> Back to
-								messages</a
-							>
+						<button class="btn" type="button">
+							<a class="btn-text" href="./"><span class="arrow">➞</span> Back to messages</a>
 						</button>
 					</li>
 				</ul>
 			</form>
-		</main>
+		</div>
 	</body>
 </html>

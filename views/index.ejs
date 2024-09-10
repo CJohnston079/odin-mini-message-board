@@ -8,25 +8,27 @@
 		<script src="./script.js" defer></script>
 	</head>
 	<body>
-		<main>
-			<header>
-				<h1>Pet Message Board</h1>
-				<p>Leave a message from your pet!</p>
+		<div id="message-board">
+			<header class="page-header-container">
+				<h1 class="page-heading">Pet Message Board</h1>
+				<p class="page-subheading">Leave a message from your pet!</p>
 			</header>
 			<div class="gradient-overlay"></div>
-			<ul id="messages">
-				<p class="messages-end-text">End of messages</p>
+			<ul id="messages-container">
+				<p id="messages-end-text">End of messages</p>
 				<% messages.map((message) => { %>
 				<li class="message-container">
-					<div class="message-header">
-						<h3><%= message.username %></h3>
-						<p class="added"><%= formatDate(message.sent_at) %></p>
+					<div class="message-header-container">
+						<h3 class="message-username"><%= message.username %></h3>
+						<p class="date-added"><%= formatDate(message.sent_at) %></p>
 					</div>
 					<p class="message-body"><%= message.message %></p>
 				</li>
 				<% }) %>
 			</ul>
-			<button class="new-button"><a href="./new">Leave a message +</a></button>
-		</main>
+			<button class="btn-emphasis">
+				<a class="btn-emphasis-text" href="./new">Leave a message +</a>
+			</button>
+		</div>
 	</body>
 </html>
