@@ -1,0 +1,61 @@
+#new-message-form {
+	flex-grow: 1;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.form-fields-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.field-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	width: 100%;
+}
+
+.field-label {
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	color: var(--cl-foreground-shade-2);
+}
+
+.field {
+	border: solid 1px var(--cl-foreground-shade-2);
+	border-radius: var(--br-light);
+	padding: 0.5rem;
+
+	font-size: 1rem;
+	font-family: "Nunito", system-ui;
+}
+
+#new-message-form textarea {
+	resize: none;
+	height: 15vh;
+}
+
+#submit-button-container {
+	margin-top: 1rem;
+}
+
+.btn-loading {
+	opacity: 0.5;
+	cursor: progress !important;
+}
+
+.btn-loading:hover {
+	filter: hue-rotate(0);
+	animation: none;
+}
+
+.btn-loading .btn-emphasis-text:hover {
+	padding: 1rem 2rem;
+	font-size: 0.9rem;
+}
