@@ -15,18 +15,20 @@
 				<p class="page-subheading">Leave a message from your pet!</p>
 			</header>
 			<div class="gradient-overlay"></div>
-			<ul id="messages-container">
+			<section id="messages-container">
 				<p id="messages-end-text">End of messages</p>
 				<% messages.map((message) => { %>
-				<li class="message-container">
-					<div class="message-header-container">
+				<article class="message-container">
+					<header class="message-header-container">
 						<h3 class="message-username"><%= message.username %></h3>
-						<p class="date-added"><%= formatDate(message.sent_at) %></p>
-					</div>
+						<time class="date-added" datetime="<%= message.sent_at.toISOString() %>">
+							<%= formatRelativeTime(message.sent_at) %>
+						</time>
+					</header>
 					<p class="message-body"><%= message.message %></p>
-				</li>
+				</article>
 				<% }) %>
-			</ul>
+			</section>
 			<a class="btn-emphasis" href="./new">
 				<span class="btn-emphasis-text">Leave a message +</span>
 			</a>
