@@ -67,6 +67,18 @@ a {
 	color: inherit;
 }
 
+fieldset {
+	border: none;
+}
+
+legend {
+	display: none;
+}
+
+nav {
+	text-align: center;
+}
+
 ul {
 	list-style-type: none;
 }
@@ -175,7 +187,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-bottom: 6vh;
 }
 
 .form-fields-container {
@@ -312,9 +323,8 @@ body {
 .err-message {
 	width: 100%;
 	text-align: center;
-	margin-bottom: 1.5rem;
-	border-bottom: solid 2px var(--cl-background-shade-2);
-	padding-bottom: 1rem;
+	border-top: solid 2px var(--cl-background-shade-2);
+	padding-top: 1rem;
 	font-size: 1.5rem;
 	font-weight: 400;
 	text-transform: uppercase;
